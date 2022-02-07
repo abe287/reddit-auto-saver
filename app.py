@@ -35,7 +35,7 @@ def download_file(media_url, filename):
     if media.status_code == 200:
         open(filename, 'wb').write(media.content)
 
-def process_download(media_url, post_id, source, subreddit, selftext, gallery_data):
+def process_download(media_url, post_id, source, subreddit, selftext, gallery_data, title):
     if source == 'i.imgur.com':
         media_url = media_url.replace('.gifv', '.mp4')
         file_extension = media_url.split(".")[-1]
@@ -55,7 +55,7 @@ def process_download(media_url, post_id, source, subreddit, selftext, gallery_da
     
     elif source == f"self.{subreddit}":
         f = open(f"{subreddit}/{post_id}.txt", "w")
-        f.write(selftext)
+        f.write(title + "\n\n" + selftext)
         f.close()
     
     elif source == 'v.redd.it':
@@ -80,6 +80,7 @@ def main():
         for post in posts:
             #If post is a link then continue (not comment, account, subreddit, etc.)
             if post['kind'] == 't3':
+                title = post['data']['title']
                 source = post['data']['domain']
                 media_url = post['data']['url']
                 post_id = post['data']['id']
@@ -99,7 +100,7 @@ def main():
 
                 if not post_id in files:
                     console_log(f"Downloading - Post ID : {post_id}")
-                    process_download(media_url, post_id, source, subreddit, selftext, gallery_data)
+                    process_download(media_url, post_id, source, subreddit, selftext, gallery_data, title)
         
         console_log(f"Next check in {delay} seconds")
         print()
