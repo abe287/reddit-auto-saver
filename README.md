@@ -28,3 +28,4 @@ pip install youtube_dl
 ```
 python app.py
 ```
+All the downloads will be saved to their respective subreddit folder.
