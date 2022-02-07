@@ -1,5 +1,5 @@
 ## Description
-This is a tool that automatically downloads images, videos, and text posts from your saved posts on your reddit account. It checks every 5 minutes to see if you saved any new posts by fetching your private RSS feed from reddit. I made this tool for archiving purposes since posts can be taken down by reddit.
+This is a tool that automatically downloads images, videos, and text posts from your saved posts on your Reddit account. It checks every 5 minutes to see if you saved any new posts by fetching your private RSS feed from Reddit. I made this tool for archiving purposes, since posts can be taken down by Reddit.
 
 ## Supported Reddit Embeds
 - imgur
@@ -8,10 +8,10 @@ This is a tool that automatically downloads images, videos, and text posts from 
 
 ## Setup
 #### Part 1
-For this to work you will have to get your Private RSS Feed url for your reddit account, you can find it at the link below. Select the JSON box next to the "your saved links" option (look at the image below for refrence).
+For this to work, you will have to get your Private RSS Feed URL for your reddit account, you can find it at the link below. Select the JSON box next to the "your saved links" option (look at the image below for reference).
 https://ssl.reddit.com/prefs/feeds/
 ![alt text](https://i.ibb.co/j8QQfjP/Screenshot-2022-02-06-224649.png)
-Once you have the url to your RSS Feed paste it inside the RSS.txt file
+Once you have the URL to your RSS Feed, paste it inside the RSS.txt file
 
 #### Part 2
 If you do not already have the requests module install it
