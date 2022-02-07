@@ -8,7 +8,7 @@ This is a tool that automatically downloads images, videos, and text posts from 
 
 ## Setup
 #### Part 1
-For this to work you will have to get your Private RSS Feed link for your reddit account, you can find it at the link below. Select the JSON box next to the "your saved links" option (look at the image below for refrence).
+For this to work you will have to get your Private RSS Feed url for your reddit account, you can find it at the link below. Select the JSON box next to the "your saved links" option (look at the image below for refrence).
 https://ssl.reddit.com/prefs/feeds/
 ![alt text](https://i.ibb.co/j8QQfjP/Screenshot-2022-02-06-224649.png)
 Once you have your RSS url paste it inside the RSS.txt file
