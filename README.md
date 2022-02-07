@@ -1,5 +1,5 @@
 ## Description
-This is a tool that automatically downloads images and videos from your saved posts on your reddit account. It checks every 5 minutes to see if you saved any new posts by fetching your private RSS feed from reddit. I made this tool for archiving purposes since posts can be taken down by reddit.
+This is a tool that automatically downloads images, videos, and text posts from your saved posts on your reddit account. It checks every 5 minutes to see if you saved any new posts by fetching your private RSS feed from reddit. I made this tool for archiving purposes since posts can be taken down by reddit.
 
 ## Supported Reddit Embeds
 - imgur
