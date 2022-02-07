@@ -106,7 +106,6 @@ def main():
         time.sleep(delay)
 
 if __name__ == "__main__":
-    #Get your RSS feed here: https://ssl.reddit.com/prefs/feeds/
-    rss_url = "YOUR_RSS_URL"
+    rss_url = open("RSS.txt").readline().rstrip()
     delay = 300 #5 minutes
     main()
