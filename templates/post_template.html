@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link href="../../templates/bootstrap.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <main class="flex-shrink-0">
+        <div class="container mt-5 px-4">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span class="float-left">Original Poster - {{ post['data']['author'] }}</span>
+                    <span class="text-right">{{ op_time_string }}</span>
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">{{ post['data']['title'] }}</h5>
+                <p class="card-text">
+                    {% if post['data']['selftext_html'] != none %}
+                        <p class="lead">{{ post_html | safe }}</p>
+                    {% endif %}
+                    {% if post['data']['url_overridden_by_dest'] is defined %}
+                        <p><a href="{{ post['data']['url_overridden_by_dest'] }}">{{ post['data']['url_overridden_by_dest'] }}</a></p>
+                    {% endif %}
+                </p>
+                <a href="https://reddit.com{{ post['data']['permalink'] }}" class="btn btn-primary">View on Reddit</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</html>
+
